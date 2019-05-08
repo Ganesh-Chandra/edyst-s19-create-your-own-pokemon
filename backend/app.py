@@ -24,7 +24,7 @@ def send(id):
     s['pokemon']['id']=int(s['pokemon']['id'])
     return jsonify(s)
 
-@app.route('/api/pokemon', methods=['POST'])
+@app.route('/api/pokemon/', methods=['POST'])
 def insert():
     if(request.json):
         with sqlite3.connect('database.db') as db:
